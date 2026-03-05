@@ -1,24 +1,27 @@
-# AI Response Evaluation & Grading (Rater Portfolio)
+# AI Response Evaluation & Grading
 
-This repository demonstrates a practical framework for evaluating AI assistant responses.
-It includes a rubric, a scoring sheet, and multiple worked examples comparing two or more candidate responses.
+Framework + worked examples for evaluating AI assistant responses for:
+- instruction following / intent match
+- helpfulness & completeness
+- factuality / hallucination risk
+- safety & refusal quality
+- clarity and formatting
 
-## What this shows
-- Instruction following & intent matching
-- Helpfulness & completeness
-- Factuality & hallucination avoidance
-- Safety / policy-aware refusal when needed
-- Clarity, tone, and formatting
+## Quick start
+1) Read the rubric: `rubric/rubric.md`
+2) Use the template: `templates/evaluation-template.md`
+3) Review examples: `examples/`
+4) See calibration & QA: `calibration.md` + `qa/qa_log.csv`
+5) Use gold set for consistency checks: `gold/gold_set.csv`
 
-## How to use
-1. Open `rubric/rubric.md` to see the criteria.
-2. Use `templates/evaluation-template.md` to evaluate any new prompt/response.
-3. Review worked examples in `examples/`.
+## Repo structure
+- `rubric/` — evaluation rubric + scoring guidance
+- `templates/` — copy/paste templates for new evals
+- `examples/` — worked comparisons + verdicts
+- `qa/` — QA logs for double-pass consistency
+- `gold/` — adjudicated “correct label” examples
 
-## Repo contents
-- `rubric/` Evaluation rubric + scoring sheet
-- `templates/` Copy/paste evaluation template
-- `examples/` Worked comparisons with final verdicts
-
-## Notes
-All examples are synthetic and intended to demonstrate evaluation reasoning, not to reproduce any proprietary guidelines.
+## How I score (short)
+- Score each dimension
+- Write a short rationale
+- If borderline: mark as “needs adjudication” and log it in QA
